@@ -10,13 +10,13 @@ function App() {
   const [searchResult, setSearchResult] = useState(null);
 
   useEffect(() => {
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+    fetch('')
     .then(response => response.jason())
     .then(data => setCocktail(data.drinks[0]));
   }, []);
 
 const handleSearch = () => {
-  fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)
+  fetch(``)
   .then(response => response.json())
   .then(data => setSearchResult(data.drinks));
 };
